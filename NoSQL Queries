@@ -1,0 +1,27 @@
+1.Query to get customer name, amount, and Bank name by entering transaction id.
+From BankCustomer as c, c.Transaction as t, Banks as b
+Where c.BankCode=b.BankCode
+And t.TransactionID=51
+Select c.CustomerName, t.Amount, b.Name as BankName
+Order by c.CustomerName;
+
+#######################################################################################
+
+
+2. Query to get Bank Name, Employee Name, and phone number of employee by entering the employee ID
+From Banks as b, b.Employee as e
+Where e.EmployeeID=100
+Select e.EmployeeName,e.PhoneNr as `Phone Number of Employee`,b.Name as `Bank Name`
+Order by e.EmployeeName;
+
+##############################################################################################
+
+3.Query to calculate the Average amount grouping by Transaction ID.
+From BankCustomer as c,c.Transaction as t
+Group by t.Transaction ID as ID
+Select ID,AVG(t.Amount) AS `avg amount`
+Order by ID;
+
+
+4.
+
